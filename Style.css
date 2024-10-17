@@ -1,48 +1,110 @@
+/* General styling */
+/* General styling */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #2E2E2E; /* Dark gray for background */
+    color: #E0E0E0; /* Light gray for text */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
-header {
-    background-color: #1A5276;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-nav {
-    background-color: #5499C7;
-    padding: 10px;
-    text-align: center;
-}
-nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}
-main {
-    padding: 20px;
-}
-footer {
-    background-color: #AED6F1;
-    color: #1A5276;
-    text-align: center;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-.Positive h3
-{
-   color: greenyellow;
 
+header {
+    background-color: #3C3C3C; /* Slightly lighter dark gray for header */
+    padding: 20px;
+    border-bottom: 3px solid #E1B12C; /* Muted yellow border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.negative h3
+
+nav h1 {
+    margin: 0;
+    color: #E1B12C; /* Muted yellow for branding */
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E0E0E0; /* Light gray for links */
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #E1B12C; /* Muted yellow hover effect */
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    text-align: center;
+    background-color: #3C3C3C; /* Lighter dark gray for contrast */
+    border-top: 3px solid #E1B12C; /* Muted yellow accent */
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 3px solid #E1B12C; /* Muted yellow for image border */
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+#projects {
+    padding: 40px;
+    background-color: #2E2E2E; /* Dark gray background */
+}
+
+article {
+    background-color: #3C3C3C; /* Slightly lighter gray for project cards */
+    border: 2px solid #E1B12C; /* Muted yellow border */
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+article:hover {
+    background-color: #C4A77F; /* Soft gold on hover */
+}
+
+article h3 {
+    margin-top: 0;
+    color: #E1B12C; /* Muted yellow for project titles */
+}
+
+a {
+    color: #E1B12C; /* Muted yellow for links */
+}
+
+a:hover 
 {
-    color: red;
+    color: #C4A77F; /* Soft gold on hover */
 }
-img{
-    border:2px #1A5276 dotted;
-    border-radius:50px; 
+
+footer 
+{
+    background-color: #3C3C3C; /* Lighter dark gray */
+    padding: 20px;
+    text-align: center;
+    color: #E0E0E0; /* Light gray for footer text */
+    border-top: 3px solid #E1B12C; 
+
 }
