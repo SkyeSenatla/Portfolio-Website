@@ -1,115 +1,126 @@
-/* General styling */
-/* General styling */
-body {
-    background-color: #2E2E2E; /* Dark gray for background */
-    color: #E0E0E0; /* Light gray for text */
-    font-family: 'Arial', sans-serif;
+/* Basic reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2F2F2F; /* Dark grey */
+    color: #D4D4D4; /* Light grey for text */
 }
 
 header {
-    background-color: #3C3C3C; /* Slightly lighter dark gray for header */
+    background-color: #ffc400ca; /* Muted yellow */
     padding: 20px;
-    border-bottom: 3px solid #E1B12C; /* Muted yellow border */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+header .brand h1 {
+    color: #2F2F2F; /* Dark grey text on yellow */
 }
 
-nav h1 {
-    margin: 0;
-    color: #E1B12C; /* Muted yellow for branding */
-    font-size: 1.8em;
+nav {
+    display: flex;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
+    list-style-type: none;
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 nav ul li a {
+    color: #2F2F2F; /* Dark grey */
     text-decoration: none;
-    color: #E0E0E0; /* Light gray for links */
-    font-size: 1.2em;
-    transition: color 0.3s;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #E1B12C; /* Muted yellow hover effect */
+    color: #D4D4D4; /* Light grey on hover */
 }
 
-/* About Section */
-#about {
-    padding: 50px;
-    text-align: center;
-    background-color: #3C3C3C; /* Lighter dark gray for contrast */
-    border-top: 3px solid #E1B12C; /* Muted yellow accent */
-}
-
-.profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    border: 3px solid #E1B12C; /* Muted yellow for image border */
-}
-
-#about p {
-    font-size: 1.2em;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Projects Section */
-#projects {
-    padding: 40px;
-    background-color: #2E2E2E; /* Dark gray background */
-}
-
-article {
-    background-color: #3C3C3C; /* Slightly lighter gray for project cards */
-    border: 2px solid #E1B12C; /* Muted yellow border */
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-}
-
-article:hover {
-    background-color: #C4A77F; /* Soft gold on hover */
-}
-
-article h3 {
-    margin-top: 0;
-    color: #E1B12C; /* Muted yellow for project titles */
-}
-
-a {
-    color: #E1B12C; /* Muted yellow for links */
-}
-
-a:hover 
-{
-    color: #C4A77F; /* Soft gold on hover */
-}
-
-footer 
-{
-    background-color: #3C3C3C; /* Lighter dark gray */
+main {
     padding: 20px;
-    text-align: center;
-    color: #E0E0E0; /* Light gray for footer text */
-    border-top: 3px solid #E1B12C; 
+}
 
+h2 {
+    color: #ffc400ca; /* Muted yellow for section titles */
+    margin-bottom: 10px;
+}
+/*Styling for the About me section*/
+.about-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    background-image: url('your-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; /* Make the image slightly opaque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the text content inside the background */
+.about-content {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    color: #D4D4D4; /* Light grey text color */
+}
+
+/* Typing text container */
+#typed-text-container {
+    font-family: 'Courier New', Courier, monospace; /* Console-like font */
+    font-size: 18px;
+    text-align: justify;
+    white-space: pre-wrap; /* Keep text formatting */
+}
+
+/* Optional: Adding an animated cursor for console effect */
+#typed-text::after {
+    content: '|';
+    animation: blink 0.8s steps(2, start) infinite;
+    color: #FFD700; /* Muted yellow for the cursor */
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.project-card, section {
+    background-color: #3E3E3E;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.project-card:hover, section:hover {
+    background-color: #5C5C5C; /* Slightly lighter grey on hover */
+}
+
+footer {
+    background-color: #1F1F1F;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: #D4D4D4;
 }
