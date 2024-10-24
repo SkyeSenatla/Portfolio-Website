@@ -10,14 +10,18 @@ body {
     background-color: #2F2F2F; /* Dark grey */
     color: #D4D4D4; /* Light grey for text */
 }
-
 header {
-    background-color: #ffc400ca; /* Muted yellow */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        background-color: #ffc400ca; /* Muted yellow */
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed; /* Make the header fixed */
+        width: 100%; /* Make the header span the entire width of the page */
+        top: 0; /* Stick it to the top */
+        z-index: 1000; /* Ensure it stays above other elements */
+    }
+
 
 header .brand h1 {
     color: #2F2F2F; /* Dark grey text on yellow */
@@ -54,7 +58,67 @@ h2 {
     color: #ffc400ca; /* Muted yellow for section titles */
     margin-bottom: 10px;
 }
-/*Styling for the About me section*/
+/* Container for links with icons */
+.links-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link-with-icon {
+    display: flex;
+    align-items: center;
+    background-color: #ffd700; /* Muted yellow */
+    color: #2F2F2F; /* Dark grey */
+    padding: 10px 20px;
+    margin: 0 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.link-with-icon:hover {
+    background-color: #d4b000; /* Darker muted yellow */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+.hand-emoji {
+    font-size: 24px;
+    margin-right: 10px;
+}
+/* Container for links with icons */
+.links-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link-with-icon {
+    display: flex;
+    align-items: center;
+    background-color: #ffd700; /* Muted yellow */
+    color: #2F2F2F; /* Dark grey */
+    padding: 10px 20px;
+    margin: 0 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.link-with-icon:hover {
+    background-color: #d4b000; /* Darker muted yellow */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+.hand-emoji {
+    font-size: 24px;
+    margin-right: 10px;
+}
+/* Container that holds the background image and content */
 .about-background {
     position: relative;
     width: 100%;
@@ -68,7 +132,7 @@ h2 {
     align-items: center;
 }
 
-/* Style the text content inside the background */
+/* Style the content inside the background */
 .about-content {
     position: relative;
     background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
@@ -78,20 +142,58 @@ h2 {
     color: #D4D4D4; /* Light grey text color */
 }
 
-/* Typing text container */
-#typed-text-container {
-    font-family: 'Courier New', Courier, monospace; /* Console-like font */
-    font-size: 18px;
-    text-align: justify;
-    white-space: pre-wrap; /* Keep text formatting */
+/* Console Title */
+#console-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #FFD700; /* Muted yellow for the title */
+    margin-bottom: 20px;
 }
 
-/* Optional: Adding an animated cursor for console effect */
-#typed-text::after {
-    content: '|';
-    animation: blink 0.8s steps(2, start) infinite;
-    color: #FFD700; /* Muted yellow for the cursor */
+/* Typing text container */
+/* Console-style font for typing effect */
+#typed-text-container {
+    font-family: 'Courier New', Courier, monospace; /* Retro console font */
+    font-size:1rem; /* Smaller font for a more refined console feel */
+    text-align: justify;
+    white-space: pre-wrap;
+    color: #FFD700; /* Muted yellow for console text */
+    background-color: #2F2F2F; /* Dark grey to match the overall scheme */
+    padding: 20px;
+    border: 1px solid #FFD700; /* Subtle yellow border */
+    border-radius: 10px;
+    max-width: vw;
+    margin: 0 auto;
+    line-height: 1.4;
 }
+
+/* Style the links to match your color scheme */
+.link-with-icon {
+    display: flex;
+    align-items: center;
+    background-color: #2F2F2F; /* Dark grey background */
+    color: #FFD700; /* Muted yellow text */
+    padding: 10px 20px;
+    margin: 0 15px;
+    border: 1px solid #FFD700; /* Subtle yellow border */
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace; /* Keep the retro font */
+    font-size: 12px; /* Small, sleek text size */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.link-with-icon:hover {
+    background-color: #FFD700; /* Muted yellow background on hover */
+    color: #2F2F2F; /* Invert text color on hover */
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.hand-emoji {
+    font-size: 16px; /* Smaller emoji for a subtle look */
+    margin-right: 10px;
+}
+
 
 /* Blinking cursor animation */
 @keyframes blink {
@@ -102,6 +204,8 @@ h2 {
         opacity: 0;
     }
 }
+
+
 
 .project-card, section {
     background-color: #3E3E3E;
